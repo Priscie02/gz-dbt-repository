@@ -1,9 +1,38 @@
 version: 2
 
-
 sources:
-  - name: gz_raw_data 
+  - name: gz_raw_data
     tables:
-    - name: raw_gz_product
-    - name: raw_gz_sales
-    - name: raw_gz_ship  
+      - name: raw_gz_product
+        description: Tableau de production
+        columns:
+          - name: products_id
+            description: clé produit
+          - name: purchase_price
+            description: prix d'achat
+      - name: raw_gz_sales
+        
+        description: tableau de ventes
+        columns:
+          - name: date_date
+            description: date de vente
+          - name: orders_id
+            description: id de commande
+          - name: products_id
+            description: clé produit
+          - name: revenue
+            description: revenu brut
+          - name: quantity
+            description: quantité
+      - name: raw_gz_ship
+        
+        columns:
+           - name: orders_id
+             description: id de commande
+           - name: shipping_fee
+             description: Frais de livraison
+           - name: logcost
+             description: cout logistiques
+           - name: ship_cost
+             description: cout de transport
+
