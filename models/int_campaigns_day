@@ -1,0 +1,7 @@
+SELECT 
+  date_date,
+  ads_cost
+  impression AS ads_impressions
+  click AS ads_clicks
+FROM int_campaign.sql
+ ORDER BY date_date DESC

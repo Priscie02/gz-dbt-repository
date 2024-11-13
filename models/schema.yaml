@@ -54,3 +54,79 @@ sources:
             description: the cost of preparing the parcel in the distribution centre/warehouse
           - name: ship_cost
             description: shipping cost paid by Greenweez to the carrier/logistics provider
+
+      - name: raw_gz_adwords
+        columns:
+          - name: date_date
+            descrition: date
+          - name: paid_source
+            description: support de campagne
+          - name: campaign_key
+            description: clé campagne
+          - name: camPGN_name
+            description: nom de campagne
+          - name: ads_cost
+            description: cout de campagne
+          - name: impression
+            description: nb de vues
+          - name: click
+            description: nb de clicks
+
+      - name: raw_gz_bing
+        columns:
+          - name: date_date
+            descrition: date
+          - name: paid_source
+            description: support de campagne
+          - name: campaign_key
+            description: clé campagne
+          - name: camPGN_name
+            description: nom de campagne
+          - name: ads_cost
+            description: cout de campagne
+          - name: impression
+            description: nb de vues
+          - name: click
+            description: nb de clicks
+        tests:
+          - unique:
+             column_name: "(date_date || '-' || campaign_key)"
+      - name: raw_gz_criteo
+        columns:
+          - name: date_date
+            descrition: date
+          - name: paid_source
+            description: support de campagne
+          - name: campaign_key
+            description: clé campagne
+          - name: camPGN_name
+            description: nom de campagne
+          - name: ads_cost
+            description: cout de campagne
+          - name: impression
+            description: nb de vues
+          - name: click
+            description: nb de clicks
+        tests:
+          - unique:
+             column_name: "(date_date || '-' || campaign_key)"
+      - name: raw_gz_facebook
+        columns:
+          - name: date_date
+            descrition: date
+          - name: paid_source
+            description: support de campagne
+          - name: campaign_key
+            description: clé campagne
+          - name: camPGN_name
+            description: nom de campagne
+          - name: ads_cost
+            description: cout de campagne
+          - name: impression
+            description: nb de vues
+          - name: click
+            description: nb de clicks
+        tests:
+          - unique:
+             column_name: "(date_date || '-' || campaign_key)"
+          
